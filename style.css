@@ -1,3 +1,10 @@
+:root {
+  --primary-color: hsl(75, 94%, 57%);
+  --grey-color-700: hsl(0, 0%, 20%);
+  --grey-color-800: hsl(0, 0%, 12%);
+  --grey-color-900: hsl(0, 0%, 8%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +21,91 @@ body {
 }
 
 body {
+  background-color: var(--grey-color-900);
   font-family: 'Inter', serif;
-  font-weight: 400;
   font-size: 1.4rem;
+  color: #fff;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: var(--grey-color-800);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  text-align: center;
+  width: 40rem;
+}
+
+.card .user-info {
+  margin-bottom: 3rem;
+}
+
+.card .user-info img {
+  width: 35%;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.card .user-info h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.card .user-info h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.card .user-info p {
+  font-weight: 300;
+}
+
+.card .user-socials {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card .user-socials a {
+  background: var(--grey-color-700);
+  color: #fff;
+  font-weight: 600;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.7rem;
+}
+
+.card .user-socials a:hover {
+  background-color: var(--primary-color);
+  color: var(--grey-color-700);
+}
+
+footer p {
+  margin: 4rem;
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: lightgreen;
+}
+
+@media (max-height: 720px) {
+  .card {
+    margin-top: 10rem;
+  }
 }
